@@ -1,6 +1,277 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/******************************************************SMALL SCREENS*********************************************************************/
+
+/******************************************************************************Header************************************************************/
+#top-header {
+  margin-top: 10px;
+  margin-left: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.headerLink {
+  text-decoration: none;
+}
+
+.siteName {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#tools {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#myAccount{
+  font-size: 20px;
+}
+
+/*********************************************************************************Navigation***********************************************************/
+nav {
+  background-color: #333; 
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: center; 
+}
+
+nav ul li {
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: #555;
+}
+
+/******************************************************************Main Content*************************************************************/
+main {
+  margin-top: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 230px 280px 300px;
+}
+
+#welcome {
+  grid-column: 1;
+  grid-row: 1;
+  /*border: 3px solid blue;*/
+  background-image: url('../images/vehicles/delorean.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  color: black; 
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+#welcomeDiv {
+  margin-top: 60px;
+  text-align: left; 
+  margin-left: -230px;
+  color: blue;
+  background-color: rgba(112, 128, 144, 0.3); 
+  border-radius: 8px; 
+  padding: 10px 10px;
+  height: 160px;
+  font-weight: bold;
+}
+
+#welcomeH3 {
+  font-size: 25px;
+  color: blue;
+  font-weight: bold;
+}
+
+.welcomeP {
+  font-size: 20px;
+}
+
+#imageButton img {
+  display: block; 
+  margin: 10px auto; 
+  width: 120px; 
+  height: auto; 
+  cursor: pointer; 
+  transition: transform 0.2s ease-in-out;
+}
+
+#imageButton img:hover {
+  transform: scale(1.1); 
+}
+
+#reviews {
+  margin-top: 30px;
+  grid-column: 1;
+  grid-row: 2;
+  /*border: 3px solid blue;*/
+}
+
+#reviewsUl {
+  margin-top: 8px;
+  margin-left: 20px;
+  justify-content: left;
+  font-size: 18px;
+}
+
+#upgrades {
+  margin-top: 30px;
+  grid-column: 1;
+  grid-row: 3;
+  /*border: 3px solid blue;*/
+}
+
+#upgradesDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+}
+
+#capacitorImg {
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(112, 128, 144, 0.5);
+}
+
+#decalsImg {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(112, 128, 144, 0.5);
+}
+
+#stickersImg {
+  grid-column: 1;
+  grid-row: 2;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: rgba(112, 128, 144, 0.5);
+}
+
+#capssImg {
+  grid-column: 2;
+  grid-row: 2;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: rgba(112, 128, 144, 0.5);
+}
+
+
+/******************************************************************LARGE SCREENS*************************************************************/
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url('../images/site/small_check.jpg');
+    max-width: 80%;
+    max-height: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 1% auto;
+  }
+
+  #wrapper {
+    background-color: white;
+  }
+
+  /********************************Header***********************************/
+
+  .siteName {
+    margin-top: 30px;
+    margin-left: 15px;
+  }
+  
+  #tools {
+    margin-top: 30px;
+  }
+
+  /********************************Navigation***********************************/
+  nav {
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+
+  nav ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+  }
+  
+  nav ul li {
+    padding: 10px 65px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  /******************************************************************Main Content*************************************************************/
+  main {
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #welcome {
+    grid-column: span 2;
+    grid-row: 1;
+    width: 80%;
+    height: 500px;
+  }
+
+  #reviews {
+    margin-top: 40px;
+    margin-left: 50px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  #upgrades {
+    margin-top: 40px;
+    margin-left: 40px;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .copyright {
+    margin-top: -10px;
+  }
+
+
 }
