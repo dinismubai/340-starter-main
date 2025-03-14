@@ -20,3 +20,9 @@ README.md
 
 #PNPM Yaml file
 pnpm-lock.yaml
+
+#Render connection
+Render.com.session.sql
+
+#Inventory data file    
+inventory-data
